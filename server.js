@@ -9,7 +9,6 @@ const mysqlBackbone = require('mysql-backbone');
 const multer = require('multer');
 const fs = require("fs")
 const app = express();
-var flash = require('connect-flash');
 const dateTime = require('date-time');
 const bcrypt = require('bcryptjs');
 var session = require('express-session');
@@ -37,8 +36,8 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 //Setting the homepage or start page Route
 app.get('/', function (req, res) {
-    res.redirect('/');
-    //res.render('pages/index');
+    // res.redirect('/');
+    res.render('pages/index');
 });
 
 
